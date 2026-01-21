@@ -15,73 +15,76 @@
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #333333; /* Charcoal for main text */
+            color: #333333;
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
         }
         
-        /* Header styling with Alan brand gradient */
+        /* Header styling - Clean gradient version */
         .header {
             background: linear-gradient(135deg, #FDECEC 0%, #F5F3FF 100%);
             color: #333333;
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 10px;
             margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            position: relative;
-            overflow: hidden; /* Ensures image stays within rounded corners */
+            text-align: center;
+            border: 1px solid rgba(74, 71, 255, 0.1);
         }
         
-        .header-image {
-            float: right;
-            width: 120px;
-            height: auto;
-            margin-left: 25px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(74, 71, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .name {
-            font-size: 2.5rem;
+        .header-content .name {
+            font-size: 2.8rem;
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: #333333;
+            letter-spacing: -0.5px;
         }
         
-        .title {
-            font-size: 1.5rem;
+        .header-content .title {
+            font-size: 1.6rem;
             font-weight: 600;
-            margin-bottom: 20px;
-            color: #4A47FF; /* Vibrant Cobalt Blue */
+            margin-bottom: 25px;
+            color: #4A47FF;
         }
         
-        .contact-info {
+        .header-content .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            justify-content: center;
+            gap: 20px;
             margin-bottom: 10px;
         }
         
-        .contact-info a {
-            color: #4A47FF; /* Vibrant Cobalt Blue for links */
+        .header-content .contact-info a {
+            color: #4A47FF;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .header-content .contact-info a:hover {
+            text-decoration: underline;
+            color: #3a37e0;
+        }
+        
+        .header-content .contact-info span {
+            color: #555;
             font-weight: 500;
         }
         
-        .contact-info a:hover {
-            text-decoration: underline;
-            color: #3a37e0; /* Slightly darker blue on hover */
-        }
-        
-        .contact-info span {
-            color: #555;
+        /* Optional tagline styling */
+        .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(74, 71, 255, 0.2);
         }
         
         /* Section styling */
@@ -95,11 +98,11 @@
         }
         
         .section-title {
-            color: #4A47FF; /* Vibrant Cobalt Blue */
+            color: #4A47FF;
             font-size: 1.5rem;
             margin-bottom: 20px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #EDECFF; /* Soft Lavender Blue */
+            border-bottom: 2px solid #EDECFF;
         }
         
         /* Resume sections */
@@ -111,8 +114,8 @@
         }
         
         .tag {
-            background: #EDECFF; /* Soft Lavender Blue */
-            color: #4A47FF; /* Vibrant Blue */
+            background: #EDECFF;
+            color: #4A47FF;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -140,7 +143,7 @@
         .job-title {
             font-weight: 700;
             font-size: 1.1rem;
-            color: #4A47FF; /* Vibrant Cobalt Blue */
+            color: #4A47FF;
         }
         
         .company {
@@ -170,8 +173,8 @@
         
         /* Cover letter and answers */
         .cover-letter {
-            background: #F5F3FF; /* Light Lavender */
-            border-left: 4px solid #4A47FF; /* Vibrant Blue */
+            background: #F5F3FF;
+            border-left: 4px solid #4A47FF;
         }
         
         .cover-letter p {
@@ -179,13 +182,13 @@
         }
         
         .question-answer {
-            background: #FFF8E1; /* Warm Cream */
-            border-left: 4px solid #e66100; /* Kept orange for contrast with blue */
+            background: #FFF8E1;
+            border-left: 4px solid #e66100;
         }
         
         .question {
             font-weight: 600;
-            color: #b35000; /* Darker orange for question text */
+            color: #b35000;
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
@@ -207,7 +210,7 @@
         }
         
         .skill-category h4 {
-            color: #4A47FF; /* Vibrant Cobalt Blue */
+            color: #4A47FF;
             margin-bottom: 8px;
             font-size: 1rem;
         }
@@ -227,7 +230,7 @@
             content: "▸";
             position: absolute;
             left: 0;
-            color: #4A47FF; /* Vibrant Cobalt Blue */
+            color: #4A47FF;
         }
         
         /* Language flags */
@@ -263,11 +266,35 @@
         }
         
         .english-flag {
-            background: linear-gradient(135deg, #012169 0%, #012169 33%, white 33%, white 66%, #c8102e 66%);
+            background: white;
+            position: relative;
+        }
+        
+        .english-flag:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                0deg,
+                transparent 45%,
+                #C8102E 45%,
+                #C8102E 55%,
+                transparent 55%
+            ),
+            linear-gradient(
+                90deg,
+                transparent 45%,
+                #C8102E 45%,
+                #C8102E 55%,
+                transparent 55%
+            );
         }
         
         .spanish-flag {
-            background: linear-gradient(to bottom, #c60b1e 33%, #ffc400 33%, #ffc400 66%, #c60b1e 66%);
+            background: linear-gradient(to bottom, #C60B1E 33%, #FFC400 33%, #FFC400 66%, #C60B1E 66%);
         }
         
         /* Footer */
@@ -283,26 +310,21 @@
         /* Responsive design */
         @media (max-width: 768px) {
             .header {
-                padding: 20px;
+                padding: 30px 20px;
             }
             
-            .header-image {
-                width: 100px;
-                margin-left: 15px;
-                margin-bottom: 10px;
+            .header-content .name {
+                font-size: 2.3rem;
             }
             
-            .name {
-                font-size: 2rem;
+            .header-content .title {
+                font-size: 1.3rem;
             }
             
-            .title {
-                font-size: 1.2rem;
-            }
-            
-            .contact-info {
+            .header-content .contact-info {
                 flex-direction: column;
-                gap: 8px;
+                gap: 10px;
+                align-items: center;
             }
             
             .section {
@@ -320,15 +342,20 @@
         }
         
         @media (max-width: 480px) {
-            .header-image {
-                float: none;
-                display: block;
-                margin: 0 auto 15px auto;
-                width: 140px;
+            .header {
+                padding: 25px 15px;
             }
             
-            .name, .title {
-                text-align: center;
+            .header-content .name {
+                font-size: 2rem;
+            }
+            
+            .header-content .title {
+                font-size: 1.1rem;
+            }
+            
+            .header-content .contact-info {
+                font-size: 0.9rem;
             }
         }
         
@@ -340,30 +367,35 @@
                 font-size: 12pt;
             }
             
+            .header {
+                background: #F5F3FF !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .header-content .name,
+            .header-content .title,
+            .header-content .contact-info a,
+            .header-content .contact-info span {
+                color: #333333;
+            }
+            
             .section {
                 box-shadow: none;
                 border: 1px solid #ddd;
                 page-break-inside: avoid;
             }
             
-            .header {
-                background: #F5F3FF !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-            }
-            
-            .header-image {
-                box-shadow: none;
-                border: 1px solid #ccc;
-            }
-            
-            a {
-                color: #4A47FF;
-                text-decoration: none;
-            }
-            
             .footer {
                 display: none;
+            }
+            
+            .contact-info a[href]:after {
+                content: " (" attr(href) ")";
+                font-size: 0.9em;
+                font-weight: normal;
             }
         }
     </style>
@@ -371,19 +403,17 @@
 <body>
     <!-- Header with contact info -->
     <header class="header">
-        <h1 class="name">Izumi Bérat</h1>
-        <h2 class="title">Full Software Engineer - International Expansion</h2>
-        
-        <div class="contact-info">
-            <span>Artigat, France | +33 (0)784 52 99 22</span>
-            <a href="mailto:izumib@gmail.com">izumib@gmail.com</a>
-            <a href="https://www.linkedin.com/pub/izumi-b%C3%A9rat/25/a84/a08/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/izumiberat" target="_blank">GitHub</a>
+        <div class="header-content">
+            <h1 class="name">Izumi Bérat</h1>
+            <h2 class="title">Full Software Engineer - International Expansion</h2>
+            
+            <div class="contact-info">
+                <span>Artigat, France | +33 (0)784 52 99 22</span>
+                <a href="mailto:izumib@gmail.com">izumib@gmail.com</a>
+                <a href="https://www.linkedin.com/pub/izumi-b%C3%A9rat/25/a84/a08/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/izumiberat" target="_blank">GitHub</a>
+            </div>
         </div>
-
-        <img src="https://github.com/izumiberat/CV/blob/main/Alan/Alan-your-friend.jpg?raw=true" 
-             alt="Alan, your friend in health" 
-             class="header-image">
     </header>
     
     <!-- Cover Letter Section -->
