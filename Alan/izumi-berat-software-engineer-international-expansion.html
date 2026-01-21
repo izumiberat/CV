@@ -11,7 +11,7 @@
     <meta property="og:title" content="Izumi Bérat | Full Software Engineer - International Expansion">
     <meta property="og:description" content="15+ years experience building scalable software for global markets. French-Japanese engineer specializing in international product expansion.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/izumiberat">
+    <meta property="og:url" content="https://izumiberat.github.io/CV/Alan">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="Software Engineer specializing in International Expansion with multicultural background">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://izumiberat.github.io/CV/Alan/">
+    <link rel="canonical" href="https://izumiberat.github.io/CV/Alan">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -35,7 +35,7 @@
             "addressLocality": "Artigat",
             "addressCountry": "FR"
         },
-        "url": "https://github.com/izumiberat",
+        "url": "https://izumiberat.github.io/CV/Alan",
         "sameAs": [
             "https://linkedin.com/in/izumi-berat",
             "https://github.com/izumiberat"
@@ -159,7 +159,7 @@
         }
         
         .header-content .contact-info a,
-        .header-content .contact-info span {
+        .header-content .contact-info .contact-details {
             color: var(--primary-color);
             text-decoration: none;
             display: flex;
@@ -183,9 +183,14 @@
             background: rgba(255, 255, 255, 0.9);
         }
         
-        .header-content .contact-info span {
+        .header-content .contact-info .contact-details {
             color: var(--text-color);
             background: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Keep contact details (location & phone) on one line */
+        .contact-details {
+            white-space: nowrap;
         }
         
         /* Optional tagline styling */
@@ -461,7 +466,7 @@
             .header-content h1,
             .header-content .title,
             .header-content .contact-info a,
-            .header-content .contact-info span {
+            .header-content .contact-info .contact-details {
                 color: #000000;
             }
             
@@ -472,7 +477,8 @@
                 break-inside: avoid;
             }
             
-            .contact-info a[href]:after {
+            .contact-info a[href]:after,
+            .contact-info .contact-details:after {
                 content: " (" attr(href) ")";
                 font-size: 0.9em;
                 font-weight: normal;
@@ -507,17 +513,31 @@
             }
             
             .header-content .contact-info {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 gap: 12px;
-                align-items: center;
+                justify-items: center;
             }
             
-            .header-content .contact-info a,
-            .header-content .contact-info span {
-                min-height: 44px;
+            /* Make contact details span full width on mobile */
+            .header-content .contact-info .contact-details {
+                grid-column: 1 / -1;
                 justify-content: center;
                 width: 100%;
-                max-width: 300px;
+                max-width: 400px;
+                text-align: center;
+                padding: 12px;
+                white-space: normal; /* Allow natural wrapping */
+                min-height: 44px;
+                font-size: 0.95rem;
+            }
+            
+            .header-content .contact-info a {
+                justify-content: center;
+                width: 100%;
+                min-height: 44px;
+                font-size: 0.95rem;
+                padding: 10px 12px;
             }
             
             .section {
@@ -551,12 +571,42 @@
                 font-size: 1.1rem;
             }
             
+            /* Adjust contact info for very small screens */
             .header-content .contact-info {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .header-content .contact-info .contact-details {
+                grid-column: 1;
                 font-size: 0.9rem;
+                padding: 10px;
+            }
+            
+            .header-content .contact-info a {
+                font-size: 0.9rem;
+                padding: 10px;
             }
             
             .section {
                 padding: 15px;
+            }
+        }
+        
+        /* Special handling for medium-small screens */
+        @media (max-width: 600px) and (min-width: 481px) {
+            .header-content .contact-info {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .header-content .contact-info .contact-details {
+                font-size: 0.9rem;
+                padding: 10px 8px;
+            }
+            
+            .header-content .contact-info a {
+                font-size: 0.9rem;
+                padding: 10px 8px;
             }
         }
         
@@ -588,6 +638,16 @@
             .tag {
                 background: rgba(74, 71, 255, 0.15);
             }
+            
+            .header-content .contact-info a,
+            .header-content .contact-info .contact-details {
+                background: rgba(255, 255, 255, 0.1);
+                color: #e0e0e0;
+            }
+            
+            .header-content .contact-info a:hover {
+                background: rgba(255, 255, 255, 0.15);
+            }
         }
     </style>
 </head>
@@ -602,10 +662,12 @@
             <div class="title">Full Software Engineer - International Expansion</div>
             
             <address class="contact-info" aria-label="Contact information">
-                <span aria-label="Location">Artigat, France | +33 (0)784 52 99 22</span>
-                <a href="mailto:izumib@gmail.com" aria-label="Email address">izumib@gmail.com</a>
-                <a href="https://www.linkedin.com/in/izumi-berat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="external-link">LinkedIn</a>
-                <a href="https://github.com/izumiberat" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="external-link">GitHub</a>
+                <span class="contact-details" aria-label="Location and phone">
+                    Artigat, France | +33 (0)784 52 99 22
+                </span>
+                <a href="mailto:izumib@gmail.com" aria-label="Email address">📧 izumib@gmail.com</a>
+                <a href="https://www.linkedin.com/in/izumi-berat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="external-link">🔗 LinkedIn</a>
+                <a href="https://github.com/izumiberat" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="external-link">🐙 GitHub</a>
             </address>
         </div>
     </header>
@@ -837,10 +899,6 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <p>Application for Full Software Engineer - International Expansion at Alan | Last updated: January 2026</p>
-        <p style="margin-top: 8px; font-size: 0.8rem;">
-            <a href="javascript:window.print()" style="color: var(--primary-color); text-decoration: none;">Print this page</a> | 
-            <a href="mailto:izumib@gmail.com?subject=Portfolio%20Inquiry" style="color: var(--primary-color); text-decoration: none;">Contact via email</a>
-        </p>
     </footer>
 </body>
 </html>
