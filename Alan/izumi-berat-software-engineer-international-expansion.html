@@ -273,6 +273,12 @@
             color: var(--text-color);
         }
         
+        .location {
+            font-weight: 500;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
         .date {
             color: var(--text-light);
             font-size: 0.95rem;
@@ -552,6 +558,12 @@
                 flex-direction: column;
                 gap: 5px;
             }
+            
+            .job-title-company {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -648,6 +660,10 @@
             .header-content .contact-info a:hover {
                 background: rgba(255, 255, 255, 0.15);
             }
+            
+            .location {
+                color: #b0b0b0;
+            }
         }
     </style>
 </head>
@@ -666,7 +682,7 @@
                     Artigat, France | +33 (0)784 52 99 22
                 </span>
                 <a href="mailto:izumib@gmail.com" aria-label="Email address">📧 izumib@gmail.com</a>
-                <a href="https://www.linkedin.com/in/izumi-berat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="external-link">🔗 LinkedIn</a>
+                <a href="https://www.linkedin.com/pub/izumi-b%C3%A9rat/25/a84/a08/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="external-link">🔗 LinkedIn</a>
                 <a href="https://github.com/izumiberat" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="external-link">🐙 GitHub</a>
             </address>
         </div>
@@ -746,9 +762,9 @@
             
             <div class="experience-item">
                 <div class="job-header">
-                    <div>
-                        <span class="job-title">Senior Technical Support Engineer</span>
-                        <span class="company"> · SimpliField</span>
+                    <div class="job-title-company">
+                        <div><span class="job-title">Senior Technical Support Engineer</span> <span class="company">· SimpliField</span></div>
+                        <div class="location">Remote, Artigat, France</div>
                     </div>
                     <div class="date">04/2023 – 04/2024</div>
                 </div>
@@ -763,8 +779,9 @@
             
             <div class="experience-item">
                 <div class="job-header">
-                    <div>
-                        <span class="job-title">Strategic Career Break & Ad-hoc Consulting</span>
+                    <div class="job-title-company">
+                        <div><span class="job-title">Strategic Career Break & Ad-hoc Consulting</span></div>
+                        <div class="location">South-East Asia & Europe</div>
                     </div>
                     <div class="date">09/2016 – 04/2023</div>
                 </div>
@@ -778,9 +795,9 @@
             
             <div class="experience-item">
                 <div class="job-header">
-                    <div>
-                        <span class="job-title">Director for Web Initiatives (Hybrid Remote)</span>
-                        <span class="company"> · Columbia University Alumni Office</span>
+                    <div class="job-title-company">
+                        <div><span class="job-title">Director for Web Initiatives (Hybrid Remote)</span> <span class="company">· Columbia University Alumni Office</span></div>
+                        <div class="location">Manhattan, New York</div>
                     </div>
                     <div class="date">08/2013 – 08/2016</div>
                 </div>
@@ -796,9 +813,9 @@
             
             <div class="experience-item">
                 <div class="job-header">
-                    <div>
-                        <span class="job-title">Product Manager (Hybrid Remote)</span>
-                        <span class="company"> · NPower</span>
+                    <div class="job-title-company">
+                        <div><span class="job-title">Product Manager (Hybrid Remote)</span> <span class="company">· NPower</span></div>
+                        <div class="location">Brooklyn, New York | Remote team in Pune, India</div>
                     </div>
                     <div class="date">04/2011 – 04/2013</div>
                 </div>
@@ -809,6 +826,51 @@
                     <li>Multiplied customer feedback volume by 4x and successfully pushed 50% of user suggestions into production.</li>
                     <li>Managed asynchronous daily communication with a remote India-based engineering team; trained and mentored team members in both locations to become Scrum Masters.</li>
                     <li>Hosted webinars, led user groups, and generated all product documentation and training materials to ensure customer and internal success.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title-company">
+                        <div><span class="job-title">QA Engineer</span> <span class="company">· WML Software Ltd</span></div>
+                        <div class="location">Auckland, New Zealand</div>
+                    </div>
+                    <div class="date">10/2008 – 08/2009</div>
+                </div>
+                <div class="job-description">Implemented testing procedures and ran full cycle web development projects (SDLC) | Streamline Processes, Time and Project Management</div>
+                <ul class="bullet-points">
+                    <li>Created from-scratch testing processes adopted by a cross-functional team of 10 for product reliability.</li>
+                    <li>Steered web and mobile project delivery including pair-programming (JavaScript), documentation, and customer support.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title-company">
+                        <div><span class="job-title">Software Lead Testing Engineer</span> <span class="company">· Omnicom Engineering</span></div>
+                        <div class="location">York, United Kingdom</div>
+                    </div>
+                    <div class="date">02/2008 – 09/2008</div>
+                </div>
+                <div class="job-description">Led testing for .NET MVC software integrating GPS and video technologies | Creativity, Collaboration and Innovation</div>
+                <ul class="bullet-points">
+                    <li>Directed UAT; produced all requirements, user stories, and release documentation for high-quality cycles.</li>
+                    <li>Unified developer and data teams to simplify workflows; improved reliability and team satisfaction through TDD and automated testing.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title-company">
+                        <div><span class="job-title">System Engineer</span> <span class="company">· European Space Agency (ESA)</span></div>
+                        <div class="location">Noordwijk, The Netherlands</div>
+                    </div>
+                    <div class="date">07/2006 – 07/2007</div>
+                </div>
+                <div class="job-description">Collaborated with multidisciplinary experts to build 3D spacecraft simulation tool for international mission to Mercury (BepiColombo). Simulation, Cross-cultural Communication</div>
+                <ul class="bullet-points">
+                    <li>Sourced and integrated complex data from electrical, power, thermal, and telecom departments, as well as external contractors, to test theories proposed in multi-million-euro international bidding process.</li>
+                    <li>Facilitated culturally appropriate communication and knowledge sharing between the European and Japanese (JAXA) space agencies.</li>
                 </ul>
             </div>
         </section>
@@ -833,7 +895,7 @@
                 <li><strong>Bachelor's in Physics & Chemistry</strong>, Toulouse III University, France, 2002</li>
             </ul>
             
-            <h3 style="margin-top: 20px; color: #1a5fb4;">Certifications</h3>
+            <h3 style="margin-top: 20px; color: #1a5fb4;">Other Certifications</h3>
             <ul class="bullet-points">
                 <li>Building AI Agents with DeepSeek using Make.com, Coursera, 2025</li>
                 <li>Generative AI: Prompt Engineering Basics, Coursera, 2025</li>
@@ -863,9 +925,30 @@
                 </div>
                 
                 <div class="skill-category">
+                    <h4>Project & Knowledge Management</h4>
+                    <ul class="skill-list">
+                        <li>Jira, Figma, Confluence, Trello, Notion</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
                     <h4>Cloud & DevOps</h4>
                     <ul class="skill-list">
                         <li>AWS (EC2, S3, ELB), Git, GitLab, Jenkins</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>API Development & Testing</h4>
+                    <ul class="skill-list">
+                        <li>Postman, REST/SOAP APIs</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Monitoring & Observability</h4>
+                    <ul class="skill-list">
+                        <li>DataDog, Selenium</li>
                     </ul>
                 </div>
                 
